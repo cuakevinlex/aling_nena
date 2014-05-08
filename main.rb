@@ -43,3 +43,11 @@ get '/delete_product/:id' do
   redirect to '/admin'
 end
 # ROUTES FOR ADMIN SECTION
+
+# ROUTES FOR CLIENT SECTION
+
+get '/about' do
+end
+
+get '/' do
+end
