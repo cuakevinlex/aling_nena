@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	 <head>
+ 	    <link href="/css/bootstrap.css" rel="stylesheet">
+	 	<title>Product List</title>
+	 </head>
+	 <body>
+	 <h1><%= "#{@product.name} - Php #{@product.price} - Total Stock: #{@product.quantity}" %></h1>
+	 <form METHOD ="POST" action ="/product/<%= @product.id %>">
+	 	<label for = "amount">Number of Items </label>
+		 <input type = "text" name = "amount" />
+		 <br />
+		 <h2>Denomination of Payment</h2>
+		 <label for = "ones">Ones</label>
+		 <input type = "text" name = "ones" />
+		 <br />
+		 <label for = "fives">Fives </label>
+		 <input type = "text" name = "fives" />
+		 <br />
+		 <label for = "tens">Tens </label>
+		 <input type = "text" name = "tens" />
+		 <br />
+		 <label for = "twenties">Twenties </label>
+		 <input type = "text" name = "twenties" />
+		 <br />
+		 <label for = "fifties">Fifties </label>
+		 <input type = "text" name = "fifties" />
+		 <br />
+		 <label for = "hundreds">Hundreds </label>
+		 <input type = "text" name = "hundreds" />
+		 <br />
+		 <label for = "five_hundreds">Five Hundreds </label>
+		 <input type = "text" name = "five_hundreds" />
+		 <br />
+		 <label for = "thousands">Thousands</label>
+		 <input type = "text" name = "thousands" />
+		 <br />
+		 <input type = "submit" value = "Buy">
+	 </form>
+	 </body>
+</html>

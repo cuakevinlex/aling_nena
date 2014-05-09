@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	 <head>
+ 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	   <title>Product List</title>
+	 </head>
+	 <body>
+	 	<h1>You just bought <%= @amount %> <%= @piece %> of <%= @product.name %></h1>
+	 	<h4>
+	 	Cash Paid: <%= @paid %> <br />
+	 	Cash Due: <%= @cash_reg.money_due %> <br />
+	 	Change: <%= @change %> <br />
+	 	Denominations: <br />
+	 	One peso coin: <%= @denominations[:ones] %> <br />
+	 	Five peso coin: <%= @denominations[:fives] %> <br />
+	 	Ten peso coin: <%= @denominations[:tens] %> <br />
+	 	Twenty peso bill: <%= @denominations[:twenties] %> <br />
+	 	Fifty peso bill: <%= @denominations[:fifties] %> <br />
+	 	Hundred peso bill: <%= @denominations[:hundreds] %> <br />
+	 	Five hundrer peso bill: <%= @denominations[:five_hundreds] %> <br />
+	 	Thousand peso bill: <%= @denominations[:thousands] %> <br />
+	 	</h4>
+	 	<br /><br /><br />
+	 	
+	 </body>
+</html>

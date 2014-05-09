@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	 <head>
+ 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/css/admin.css" rel="stylesheet">
+	 	<title>Product List</title>
+	 </head>
+	 <body>
+	 	<h1>PRODUCT LIST</h1>
+	 	<br /><br /><br />
+	 	<table class="table table-striped">
+          <thead>
+            <tr>
+              <center><td>Name</td></center>
+              <td>Price</td>
+              <td>Quantity</td>
+            </tr>
+          </thead>
+          <tbody>
+          <% @products.each do |product| %>
+            <tr>
+              <td><%= product.name %></td>
+              <td><%= product.price %></td>
+              <td><%= product.quantity %></td>
+              <td><a href="/product/<%= product.id %>" class="btn btn-default btn-primary">Buy</a></td>
+             </tr>
+          </tbody>
+          <% end %>
+        </table>
+	 </body>
+</html>
