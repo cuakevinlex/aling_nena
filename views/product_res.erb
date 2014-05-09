@@ -2,14 +2,14 @@
 <html>
 	 <head>
  	    <link href="/css/bootstrap.min.css" rel="stylesheet">
-	   <title>Product List</title>
+	   <title><%= @product.name %></title>
 	 </head>
 	 <body>
 	 	<h1>You just bought <%= @amount %> <%= @piece %> of <%= @product.name %></h1>
 	 	<h4>
-	 	Cash Paid: <%= @paid %> <br />
-	 	Cash Due: <%= @cash_reg.money_due %> <br />
-	 	Change: <%= @change %> <br />
+	 	Cash Paid: <%= @money_paid %> <br />
+	 	Cash Due: <%= @money_due %> <br />
+	 	Change: <%= @money_change %> <br />
 	 	Denominations: <br />
 	 	One peso coin: <%= @denominations[:ones] %> <br />
 	 	Five peso coin: <%= @denominations[:fives] %> <br />

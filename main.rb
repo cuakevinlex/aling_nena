@@ -52,6 +52,7 @@ get '/about' do
 end
 
 get '/' do
+	erb :index
 end
 
 get '/products' do
@@ -66,29 +67,38 @@ end
 
 post '/product/:id' do
 	@product = Item.find(params[:id])
-	@amount = params[:amount]
-	@ones = params[:one]
-	@fives = params[:fives]
-	@tens = params[:tens]
-	@fifites = params[:fifties]
-	@hundreds = params[:hundreds]
-	@five_hundreds = params[:five_hundreds]
-	@thousands = params[:thousands]
-	@cash_reg = MoneyCalculator.new @ones, @fives, @tens, @twenties, @fifties, @hundreds, @five_hundreds, @thousands
-	if @amount.to_i == 1
-		@piece = "piece"
+	if params[:amount] == "" or params[:ones] or params[:fives] or params[:tens]or params[:twenties] or params[:fifties] or params[:hundreds] or params[:five_hundreds] or params[:thousands]
+		erb :product_res_fail2
 	else
-		@piece = "pieces"
+		@amount = params[:amount]
+		@ones = params[:one]
+		@fives = params[:fives]
+		@tens = params[:tens]
+		@fifites = params[:fifties]
+		@hundreds = params[:hundreds]
+		@five_hundreds = params[:five_hundreds]
+		@thousands = params[:thousands]
+		@cash_reg = MoneyCalculator.new @ones, @fives, @tens, @twenties, @fifties, @hundreds, @five_hundreds, @thousands
+		if @amount.to_i == 1
+			@piece = "piece"
+		else
+			@piece = "pieces"
+		end
+		@money_paid = @cash_reg.money_paid.to_i
+		@money_due = @amount.to_i * @product.price.to_i
+		@money_change = @money_paid - @money_due
+		if @money_change >=0
+			@denominations = @cash_reg.change(@money_change)
+			@change = @cash_reg.money_totalchange
+			@paid = @cash_reg.money_paid
+			@product.update_attributes!(
+		    name: @product.name,
+		    price: @product.price,
+   			quantity: @product.quantity.to_i - @amount.to_i,
+			)
+			erb :product_res
+		else
+			erb :product_res_fail
+		end
 	end
-	@total = @amount.to_i * @product.price.to_i
-	@denominations = @cash_reg.change(@total)
-	@change = @cash_reg.money_totalchange
-	@paid = @cash_reg.money_paid
-	@product.update_attributes!(
-    name: @product.name,
-    price: @product.price,
-    quantity: @product.quantity.to_i - @amount.to_i,
-    )
-    
-	erb :product_res
 end

@@ -23,7 +23,7 @@ class MoneyCalculator
     	(@fifties.to_i * 50) + (@hundreds.to_i * 100) + (@five_hundreds.to_i * 500) + (@thousands.to_i * 1000)
   end
   
-  def change(money_due)
+  def change(money_change)
     #denominations = {
     #:ones => @ones,
     #:fives => @fives,
@@ -43,7 +43,7 @@ class MoneyCalculator
     @five_hundreds_c = 0
     @thousands_c = 0
     @money_change = money_change
-   while (@money_change != 0)
+	while (@money_change != 0)
     	if @money_change >= 1000
     		@money_change -= 1000
     		@thousands_c += 1
