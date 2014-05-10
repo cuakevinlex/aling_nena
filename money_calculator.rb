@@ -19,30 +19,23 @@ class MoneyCalculator
     @hundreds = hundreds
     @five_hundreds = five_hundreds
     @thousands = thousands
-    @money_paid = (@ones.to_i * 1) + (@fives.to_i * 5) + (@tens.to_i * 10) + (@twenties.to_i * 10) +
+    @money_paid = (@ones.to_i * 1) + (@fives.to_i * 5) + (@tens.to_i * 10) + (@twenties.to_i * 20) +
     	(@fifties.to_i * 50) + (@hundreds.to_i * 100) + (@five_hundreds.to_i * 500) + (@thousands.to_i * 1000)
   end
   
-  def change(money_change)
-    #denominations = {
-    #:ones => @ones,
-    #:fives => @fives,
-    #:tens => @tens,
-    #:twenties => @twenties,
-    #:fifties => @fifties,
-    #:hundreds => @hundreds,
-    #:five_hundreds => @five_hundreds,
-    #:thousands => @thousands
-    #}
+  def change(amount, price)
     @ones_c = 0
     @fives_c = 0
     @tens_c = 0
     @twenties_c = 0
     @fifties_c = 0
-    @hundred_c = 0
+    @hundreds_c = 0
     @five_hundreds_c = 0
     @thousands_c = 0
-    @money_change = money_change
+    
+    @total_pay = amount.to_i * price.to_i
+    @money_change = @money_paid - @total_pay
+    
 	while (@money_change != 0)
     	if @money_change >= 1000
     		@money_change -= 1000
@@ -70,9 +63,10 @@ class MoneyCalculator
     		@ones_c +=1
     	end
     end
+    
     denominations ={
     :ones => @ones_c,
-    :five => @fives_c,
+    :fives => @fives_c,
     :tens => @tens_c,
     :twenties => @twenties_c,
     :fifties => @fifties_c,
@@ -80,6 +74,7 @@ class MoneyCalculator
     :five_hundreds => @five_hundreds_c,
     :thousands => @thousands_c
     }
+    
     return denominations
   end
 	

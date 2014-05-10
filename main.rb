@@ -67,14 +67,15 @@ end
 
 post '/product/:id' do
 	@product = Item.find(params[:id])
-	if params[:amount] == "" or params[:ones] or params[:fives] or params[:tens]or params[:twenties] or params[:fifties] or params[:hundreds] or params[:five_hundreds] or params[:thousands]
+	if params[:amount] == "" or params[:ones]  == ""or params[:fives] == "" or params[:tens] == ""or params[:twenties]  == "" or params[:fifties]  == "" or params[:hundreds]  == "" or params[:five_hundreds]  == "" or params[:thousands]  == ""
 		erb :product_res_fail2
 	else
 		@amount = params[:amount]
-		@ones = params[:one]
+		@ones = params[:ones]
 		@fives = params[:fives]
 		@tens = params[:tens]
-		@fifites = params[:fifties]
+		@twenties = params[:twenties]
+		@fifties = params[:fifties]
 		@hundreds = params[:hundreds]
 		@five_hundreds = params[:five_hundreds]
 		@thousands = params[:thousands]
@@ -88,7 +89,7 @@ post '/product/:id' do
 		@money_due = @amount.to_i * @product.price.to_i
 		@money_change = @money_paid - @money_due
 		if @money_change >=0
-			@denominations = @cash_reg.change(@money_change)
+			@denominations = @cash_reg.change(@amount, @product.price)
 			@change = @cash_reg.money_totalchange
 			@paid = @cash_reg.money_paid
 			@product.update_attributes!(
