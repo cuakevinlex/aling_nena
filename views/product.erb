@@ -1,10 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 	 <head>
- 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
 	 	<title>Product List</title>
+ 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
+ 	    <link href="/css/kevin.css" rel="stylesheet">
 	 </head>
 	 <body>
+	 	<div class = "mybar">
+	 		<a href ="/"><div>
+	 			<p>Home</p>
+	 		</div></a>
+	 		<a href ="/products"><div>
+	 			<p>Products</p>
+	 		</div></a>
+	 		<a href ="/about"><div>
+	 			<p>About Us</p>
+	 		</div></a>
+	 	</div>
 	 <h1><%= "#{@product.name} - Php #{@product.price} - Total Stock: #{@product.quantity}" %></h1>
 	 <form METHOD ="POST" action ="/product/<%= @product.id %>">
 	 	<label for = "amount">Number of Items </label>
@@ -35,7 +47,7 @@
 		 <label for = "thousands">Thousands</label>
 		 <input type = "text" name = "thousands" />
 		 <br />
-		 <input type = "submit" value = "Buy">
+		 <input type = "submit" value = "Buy" />
 	 </form>
 	 </body>
 </html>

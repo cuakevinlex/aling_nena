@@ -1,10 +1,24 @@
 <!DOCTYPE HTML>
 <html>
 	 <head>
- 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
 	   <title><%= @product.name %></title>
+	   <link href="/css/bootstrap.min.css" rel="stylesheet">
+	   <link href="/css/bootstrap.min.css" rel="stylesheet">
+	   <link href="/css/kevin.css" rel="stylesheet" />
+	   <title>Aling Nena</title>
 	 </head>
 	 <body>
+	 	<div class = "mybar">
+	 		<a href =""><div>
+	 			<p>Home</p>
+	 		</div></a>
+	 		<a href ="products"><div>
+	 			<p>Products</p>
+	 		</div></a>
+	 		<a href ="about"><div>
+	 			<p>About Us</p>
+	 		</div></a>
+	 	</div>
 	 	<h1>You just bought <%= @amount %> <%= @piece %> of <%= @product.name %></h1>
 	 	<h4>
 	 	Cash Paid: <%= @money_paid %> <br />

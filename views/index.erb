@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 	 <head>
- 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
- 	    <link href="/css/kevin.css" rel="stylesheet">
+ 	    <script type = "text/javascript" src = "/js/modernizr.custom.js"></script>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+ 	    <link href="/css/kevin.css" rel="stylesheet" />
 	   <title>Aling Nena</title>
 	 </head>
 	 <body>
@@ -17,8 +18,45 @@
 	 			<p>About Us</p>
 	 		</div></a>
 	 	</div>
-	 	<h1></h1>
+	 	<br /><br />
+		<div class = "myslider">
+	 		<div id="cbp-fwslider" class="cbp-fwslider">
+				<ul>
+					<li><a href="#"><img class = "first" src="pics/1.png" alt="1"/></a></li>
+					<li>
+					<a href="#">
+					<div>
+					<%= @listofitems %>
+					</div>
+					</a></li>
+					<li><a href="#"><img src="pics/2.png" alt="3"/></a></li>
+					<li><a href="#"><img src="pics/2.jpg" alt="4"/></a></li>
+					<li><a href="#"><img src="pics/2.jpg" alt="5"/></a></li>
+				</ul>
+			</div>
+		</div>
 	 	<br />
-	 	
+	 	<script src="/js/jquery.min.js"></script>
+	 	<script src="/js/jquery.cbpFWSlider.min.js"></script>
+	 	<script>
+			$( function() {
+				/*
+				- how to call the plugin:
+				$( selector ).cbpFWSlider( [options] );
+				- options:
+				{
+					// default transition speed (ms)
+					speed : 500,
+					// default transition easing
+					easing : 'ease'
+				}
+				- destroy:
+				$( selector ).cbpFWSlider( 'destroy' );
+				*/
+
+				$( '#cbp-fwslider' ).cbpFWSlider();
+
+			} );
+		</script>
 	 </body>
 </html>
