@@ -125,6 +125,7 @@ post '/product/:id' do
 		    name: @product.name,
 		    price: @product.price,
    			quantity: @product.quantity.to_i - @amount.to_i,
+   			sold: @product.sold.to_i + @amount.to_i 
 			)
 			erb :product_res
 		end

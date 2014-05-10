@@ -18,13 +18,14 @@
 	 		</div></a>
 	 	</div>
 	 	<h1>PRODUCT LIST</h1>
-	 	<br /><br /><br />
-	 	<table class="table table-responsive table-striped">
+	 	<br /><br />
+	 	<center><table class = "flat-table flat-table-1">
           <thead>
             <tr>
               <center><td>Name</td></center>
               <td>Price</td>
               <td>Quantity</td>
+              <td></td>
             </tr>
           </thead>
           <tbody>
@@ -35,7 +36,7 @@
               <td><%= product.quantity %></td>
               <td><a href="/product/<%= product.id %>" class="btn btn-default btn-primary">Buy</a></td>
              </tr>
-          </tbody>
+          </tbody></center>
           <% end %>
         </table>
 	 </body>

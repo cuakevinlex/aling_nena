@@ -1,3 +1,13 @@
+body
+{
+background-image: url("../pics/back.jpg");
+background-size: cover;
+background-repeat: no repeat;
+}
+h1,a,p,input,h3,h4,h2,form
+{
+text-align: center;
+}
 .mybar div
 {
 float: left;
@@ -28,6 +38,18 @@ background-color: rgba(0,0,0,0.83);
 .myslider
 {
 background-color:rgba(50,50,50,0.83);
+}
+
+.myabout
+{
+background: rgba(205,133,63,0.6);
+width: 75%;
+text-align: center;
+}
+.myabout p, .myabout h1
+{
+
+color: rgba(255,255,255,0.88);
 }
 
 h1.about
@@ -98,6 +120,8 @@ src: url('../fonts/GatsbyFLF-Bold.ttf') format('truetype');
 	left: 300px;
 	position: relative;
 	text-align: center;*/
+	top: -40px;
+	position: relative;
 	border: none;
 	display: block;
 	margin: 0 auto;
@@ -114,6 +138,13 @@ src: url('../fonts/GatsbyFLF-Bold.ttf') format('truetype');
 	margin :0px;
 	padding: 0px;
 	border: 0px;
+}
+
+.cbp-fwslider ul li > a div h1
+{
+	text-align: center;
+	color: white;
+	font-family: Quicksand;
 }
 
 .cbp-fwslider nav span {
@@ -151,6 +182,12 @@ src: url('../fonts/GatsbyFLF-Bold.ttf') format('truetype');
 	height: 300px;	
 }
 
+.cbp-fwslider img.second
+{
+	width: 465px;
+	height: 300px;	
+}
+
 .cbp-fwdots {
 	position: absolute;
 	bottom: 0px;
@@ -179,3 +216,42 @@ src: url('../fonts/GatsbyFLF-Bold.ttf') format('truetype');
 	transition: box-shadow 0.2s ease-in-out;
 }
 
+.flat-table {
+		margin-bottom: 20px;
+		border-collapse:collapse;
+		font-family: 'Lato', Calibri, Arial, sans-serif;
+		border: none;
+    	border-radius: 3px;
+    	-webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+}
+.flat-table th, .flat-table td {
+	box-shadow: inset 0 -1px rgba(0,0,0,0.25), 
+		inset 0 1px rgba(0,0,0,0.25);
+}
+.flat-table th {
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	padding: 1em;
+	color: rgba(0,0,0,0.45);
+	text-shadow: 0 0 1px rgba(0,0,0,0.1);
+	font-size: 1.5em;
+}
+.flat-table td {
+	color: #f7f7f7;
+	padding: 0.7em 1em 0.7em 1.15em;
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	font-size: 1.4em;
+}
+.flat-table tr {
+	-webkit-transition: background 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+.flat-table-1 {
+	/*background: rgba(139, 69, 19, 0.69);*/
+	background: rgba(205,133,63,0.6);
+}
+.flat-table-1 tr:hover {
+	background: rgba(0,0,0,0.8);
+}
