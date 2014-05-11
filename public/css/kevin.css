@@ -8,9 +8,10 @@ h1,a,p,input,h3,h4,h2,form
 {
 text-align: center;
 }
-h4
+h4,p, div p
 {
 font-size: 20px;
+font-family: Century;
 }
 h1
 {
