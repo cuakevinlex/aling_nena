@@ -1,6 +1,7 @@
 require 'sinatra'
 require './boot.rb'
 require './money_calculator.rb'
+require './reserve.rb'
 
 # ROUTES FOR ADMIN SECTION
 get '/admin' do
@@ -130,4 +131,31 @@ post '/product/:id' do
 			erb :product_res
 		end
 	end
+end
+
+#ROUTES FOR HOTEL SERVER
+
+get '/hotel' do
+	erb :hotel
+end
+
+get '/hotelabout' do
+	erb :hotelabout
+end
+
+get '/hotelreserve' do
+	erb :hotelreserve
+end
+
+get '/hotelrooms' do
+	erb :hotelrooms
+end
+
+post '/hotelreserve' do
+	fname = params[:fname]
+	lname = params[:lname]
+	email = params[:email]
+	room = params[:room]
+	@reserve = Reserve.new fname, lname, email, room
+	erb :hotelreserve_results
 end

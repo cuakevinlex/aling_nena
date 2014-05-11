@@ -17,7 +17,9 @@
 	 			<p>About Us</p>
 	 		</div></a>
 	 	</div>
+	 	<br />
 	 <h1><%= "#{@product.name} - Php #{@product.price} - Total Stock: #{@product.quantity}" %></h1>
+	 	<br />
 	 <form METHOD ="POST" action ="/product/<%= @product.id %>">
 	 	<label for = "amount">Number of Items </label>
 		 <input type = "text" name = "amount" />

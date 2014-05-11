@@ -10,9 +10,11 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-body {
+body 
+{
   margin: 0;
 }
+
 article,
 aside,
 details,
@@ -5782,4 +5784,506 @@ button.close {
     display: none !important;
   }
 }
+
+
+
+
+@font-face
+{
+font-family: Chopin;
+src: url('../fonts/ChopinScript.otf') format('truetype');
+}
+
+@font-face
+{
+font-family: kaushan;
+src: url('../fonts/KaushanScript-Regular.otf') format('truetype');
+}
+@font-face
+{
+font-family: quicksand;
+src: url('../fonts/Quicksand-Bold.otf') format('truetype');
+}
+h1
+{
+color: red;
+font-family: Chopin;
+text-align: center;
+font-size: 60px;
+}
+
+h1.about
+{
+color: red;
+font-family: kaushan;
+text-align: center;
+font-size: 50px;
+}
+
+h1.welcome
+{
+text-shadow: 2px 2px 20px;
+font-size: 150px;
+position: relative;
+top: 125px;
+}
+
+#divmain
+{
+width: 100%;
+position: absolute;
+top: 0px;
+}
+
+.divmain2
+{
+width: 20%;	
+float: left;
+background-color: rgba(0,0,0,0.3);
+}
+
+.divmain2 a
+{
+
+font-size: 18px;
+font-family: varamond;
+color: rgba(255, 0,0,0.8);
+}
+
+
+
+
+body 
+{
+  margin: 0;
+  overflow-y: hidden;
+}
+ p 
+ {
+ color: blue;
+ }
+.divabout
+{
+opacity: .5;
+background-color: pink;
+height:50%;
+width: 50%;
+
+}
+
+
+
+
+.divroom
+
+{
+
+height:250px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: -40px;
+
+}
+
+.divroom2
+
+{
+
+height:250px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: -80px;
+
+}
+
+.divname
+
+{ 
+
+height:30px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+}
+
+.divname2
+
+{ 
+
+height:30px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: -40px;
+
+}
+
+.divname3
+
+{ 
+
+height:25px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: -40px;
+
+}
+
+.divname4
+
+{ 
+
+height:35px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: -80px;
+
+}
+
+.divname5
+
+{ 
+
+height:30px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+}
+
+.divrooms
+
+{
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+}
+
+.divrooms2
+
+{
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 16%;
+
+}
+
+.divrooms3
+
+{
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 16%;
+
+}
+
+.divrooms4
+
+{
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 29%;
+
+}
+
+
+
+.divnames
+
+{
+
+width: 25%;
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 12%;
+
+} 
+
+.divnames2
+
+{
+
+width: 25%;
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 39%;
+
+} 
+
+.divnames3
+
+{
+
+width: 25%;
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 30%;
+
+} 
+
+.divnames4
+
+{
+
+width: 25%;
+
+height: 100%;
+
+float:left;
+
+opacity:1;
+
+position: relative;
+
+left: 55%;
+
+} 
+
+div div p
+{
+color: red;
+text-size: 15px;
+text-align: left;
+position: relative;
+font-family: verdana;
+}
+
+p.abt
+{
+color: red;
+text-size: 20px;
+font-family: verdana;
+}
+
+div div img
+
+{
+
+height: 100%;
+
+width: auto;
+
+position:relative;
+
+top: 0px;
+
+}
+
+
+
+.divshade
+
+{ 
+
+height: 400px;
+
+width: 100%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: 140px;
+
+}
+
+
+
+.divshade2
+
+{ 
+
+height: 600px;
+
+width: 50%;
+
+margin: 0;
+
+padding: 0;
+
+top: 0;
+
+left: 0;
+
+background-color: rgba(0,0,0,0.8);
+
+position: relative;
+
+top: -15px;
+
+}
+
+.divleft
+
+{
+
+float:left;
+width: 50%;
+}
+
+a.font
+
+{
+
+font-family: quicksand;
+
+}
+
+p.reserve
+
+{
+
+color: red;
+
+text-size: 15px;
+
+text-align: center;
+
+position: relative;
+
+font-family: verdana;
+}
+
+h2
+{
+color: silver;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */

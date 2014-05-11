@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		Ffen's Hotel
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	</head>
+	<body background = "pics/front.jpg">
+		<div id ="divmain">
+			<div class = "divmain2">
+			<center /><a class ="font" href="/hotel">Home</a></li>
+			</div>
+			<div class = "divmain2">
+			<center /><a class ="font" href="/hotelrooms">Hotel Rooms</a>
+			</div>
+			<div class = "divmain2">
+			<center /><a class ="font" href="/hotelreserve">Reserve a Room</a>
+			</div>
+			<div class = "divmain2">
+			<center /><a  class ="font" href="/hotelabout">About us</a>
+			</div>
+			<div class = "divmain2">
+			<center /><a  class ="font" href="/">Aling Nena</a>
+			</div>
+		</div>
+		<br />
+			<h1>Ffen's Hotel</h1>
+			<br />
+			<br />
+			<center>
+				<div class = "divshade2">
+					<br />
+					<br />	<br />
+					<br />
+					
+					<div class = "divleft"><p class = "reserve">First Name: </p></div>
+					<div>
+						<form method="POST" action="/reserve">
+						<input type="text" name="fname" />
+							</div>
+							<br />
+							<br />
+							<div class = "divleft"><p class = "reserve">Last Name: </p></div>
+							<div>
+								<input type="text" name="lname" />
+							</div>
+							<br />
+							<br />
+							<div class = "divleft"><p class = "reserve">Suite: </p></div>
+							<div>
+							<select name="room">
+		 						<option value="Ching Chang Suite">Ching Chang Suite</option>
+								<option value="Fountain Suite">Fountain Suite</option>
+								<option value="Book Suite">Book Suite</option>
+								<option value="Swim Suite">Swim Suite</option>
+							</select>
+							</div>
+							<br />
+							<br />
+							<div class = "divleft"><p class = "reserve">Birthday: </p></div>
+							<div>
+								 <input type="date" name="bday" />
+							</div>
+							<br />
+							<br />
+							<div class = "divleft"><p class = "reserve">e-mail: </p></div>
+							<div>
+								<input type="email" name="email" />
+							</div>
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+					
+							<input type="submit" value="Submit">
+					</form>
+				
+				</div>
+					
+			</center>
+	</body>
+</html>
