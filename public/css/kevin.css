@@ -8,10 +8,18 @@ h1,a,p,input,h3,h4,h2,form
 {
 text-align: center;
 }
-h4,p, div p
+h4,p, label
 {
-font-size: 20px;
+font-size: 25px;
 font-family: Century;
+}
+label
+{
+width: 230px;
+}
+input
+{
+width: 200px;
 }
 h1
 {
@@ -59,10 +67,11 @@ text-align: center;
 }
 .myabout p
 {
-font-family: Times New Roman;
+font-family: Myriad;
 color: rgba(255,255,255,0.88);
 font-size:18px;
 margin: 5px;
+text-align: center;
 }
 h1.product
 {
@@ -81,10 +90,6 @@ h1.about
 text-align: center;
 }
 
-p.about
-{
-text-align: center;
-}
 
 @font-face
 {
@@ -102,6 +107,12 @@ src: url('../fonts/GatsbyFLF-Bold.ttf') format('truetype');
 {
 font-family: Bleed;
 src: url('../fonts/Bleeding Cowboys.ttf') format('truetype');
+}
+
+@font-face
+{
+font-family: Myriad;
+src: url('../fonts/MYRIADPRO-REGULAR.OTF') format('truetype');
 }
 
 .cbp-fwslider {

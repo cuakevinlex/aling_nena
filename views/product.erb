@@ -4,6 +4,7 @@
 	 	<title>Product List</title>
  	    <link href="/css/bootstrap.min.css" rel="stylesheet">
  	    <link href="/css/kevin.css" rel="stylesheet">
+ 	    <link rel="shortcut icon" href="/pics/nena.ico">
 	 </head>
 	 <body>
 	 	<div class = "mybar">
@@ -22,34 +23,34 @@
 	 	<br />
 	 <form METHOD ="POST" action ="/product/<%= @product.id %>">
 	 	<label for = "amount">Number of Items </label>
-		 <input type = "text" name = "amount" />
+		 <input type = "number" placeholder = "Enter a number" name = "amount" />
 		 <br />
 		 <h2>Denomination of Payment</h2>
 		 <label for = "ones">Ones</label>
-		 <input type = "text" name = "ones" />
+		 <input type = "number" placeholder = "Enter a number" name = "ones" />
 		 <br />
 		 <label for = "fives">Fives </label>
-		 <input type = "text" name = "fives" />
+		 <input type = "number" placeholder = "Enter a number" name = "fives" />
 		 <br />
 		 <label for = "tens">Tens </label>
-		 <input type = "text" name = "tens" />
+		 <input type = "number" placeholder = "Enter a number" name = "tens" />
 		 <br />
 		 <label for = "twenties">Twenties </label>
-		 <input type = "text" name = "twenties" />
+		 <input type = "number" placeholder = "Enter a number" name = "twenties" />
 		 <br />
 		 <label for = "fifties">Fifties </label>
-		 <input type = "text" name = "fifties" />
+		 <input type = "number" placeholder = "Enter a number" name = "fifties" />
 		 <br />
 		 <label for = "hundreds">Hundreds </label>
-		 <input type = "text" name = "hundreds" />
+		 <input type = "number" placeholder = "Enter a number" name = "hundreds" />
 		 <br />
 		 <label for = "five_hundreds">Five Hundreds </label>
-		 <input type = "text" name = "five_hundreds" />
+		 <input type = "number" placeholder = "Enter a number" name = "five_hundreds" />
 		 <br />
 		 <label for = "thousands">Thousands</label>
-		 <input type = "text" name = "thousands" />
-		 <br />
-		 <input type = "submit" value = "Buy" />
+		 <input type = "number" placeholder = "Enter a number" name = "thousands" />
+		 <br /><br />
+		 <input type = "submit" value = "Pay" />
 	 </form>
 	 </body>
 </html>

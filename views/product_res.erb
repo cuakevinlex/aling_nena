@@ -3,8 +3,8 @@
 	 <head>
 	   <title><%= @product.name %></title>
 	   <link href="/css/bootstrap.min.css" rel="stylesheet">
-	   <link href="/css/bootstrap.min.css" rel="stylesheet">
 	   <link href="/css/kevin.css" rel="stylesheet" />
+	   <link rel="shortcut icon" href="/pics/nena.ico">
 	   <title>Aling Nena</title>
 	 </head>
 	 <body>
@@ -25,7 +25,7 @@
 	 	<h4>
 	 	Cash Paid: <%= @money_paid %> <br />
 	 	Cash Due: <%= @money_due %> <br />
-	 	Change: <%= @money_change %> <br />
+	 	Change: <%= @money_change %> <br /><br />
 	 	Denominations: <br />
 	 	One peso coin: <%= @denominations[:ones] %> <br />
 	 	Five peso coin: <%= @denominations[:fives] %> <br />
