@@ -93,7 +93,7 @@ end
 
 post '/product/:id' do
 	@product = Item.find(params[:id])
-	if params[:amount] == "" or params[:ones]  == ""or params[:fives] == "" or params[:tens] == ""or params[:twenties]  == "" or params[:fifties]  == "" or params[:hundreds]  == "" or params[:five_hundreds]  == "" or params[:thousands]  == ""
+	if params[:amount] == "" or params[:ones]  == ""or params[:fives] == "" or params[:tens] == ""or params[:twenties]  == "" or params[:fifties]  == "" or params[:hundreds]  == "" or params[:five_hundreds]  == "" or params[:thousands]  == "" or params[:amount].to_i <= 0 or params[:ones].to_i < 0 or params[:fives].to_i < 0 or params[:tens].to_i < 0 or params[:twenties].to_i < 0 or params[:fifties].to_i < 0 or params[:hundreds].to_i < 0 or params[:five_hundreds].to_i < 0 or params[:thousands].to_i < 0
 		erb :product_res_fail2
 	else
 		@amount = params[:amount].to_i
